@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const NewArrivals = () => {
   return (
@@ -16,12 +17,13 @@ const NewArrivals = () => {
             <p className="text-gray-100 font-semibold tracking-wide mt-2">
               Perfect for every occasion and every season.
             </p>
-            <button
+            <NavLink
+              to = "/product"
               type="button"
               className="mt-4 py-2 w-full px-5 text-lg font-medium border border-transparent bg-white text-gray-900 transition-colors duration-300 hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-100"
             >
               SHOP NOW
-            </button>
+            </NavLink>
           </div>
         </div>
   
@@ -33,12 +35,13 @@ const NewArrivals = () => {
             <p className="text-gray-100 font-semibold tracking-wide mt-2">
               Fashionable and functional, just the way you like it.
             </p>
-            <button
+            <NavLink
+              to = "/product"
               type="button"
               className="mt-4 py-2 w-full px-5 text-lg font-medium border border-transparent bg-white text-gray-900 transition-colors duration-300 hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-100"
             >
               SHOP NOW
-            </button>
+            </NavLink>
           </div>
         </div>
   
@@ -50,12 +53,13 @@ const NewArrivals = () => {
             <p className="text-gray-100 font-semibold tracking-wide mt-2">
               Elevate your style with our curated collection of accessories.
             </p>
-            <button
+            <NavLink
+              to = "/product"
               type="button"
               className="mt-4 py-2 w-full px-5 text-lg font-medium border border-transparent bg-white text-gray-900 transition-colors duration-300 hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-100"
             >
               SHOP NOW
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>
