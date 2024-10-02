@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li{
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f7;
+  color: #000;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #aaaaaa;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+.App #content {
+  transition-duration: 0.3s;
+}
+.hero-section {
+  position: relative;
+  background-image: url('./assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* This enables the parallax effect */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.container {
+  z-index: 2;
+  position: relative;
+  color: white;
+  text-align: center; /* Center text inside the container */
+  padding: 1rem;
+  width: 50%;
+}
+
+.arrivals{
+ 
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+position: relative;
+}
+
+.arrivals--clothes{
+  background-image: url("./assets/images/arrivals1.jpg");
+}
+.arrivals--bags{
+  background-image: url("./assets/images/arrivals2.jpg");
+}
+
+.arrivals--accessories{
+  background-image: url("./assets/images/arrivals3.jpg");
+}
+
+
