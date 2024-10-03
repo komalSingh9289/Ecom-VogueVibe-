@@ -30,7 +30,7 @@ export const getUserOrder = async (req, res) => {
 
   try {
     const orders = await Order.find({
-      "cartItems.0.userId": id, // Assuming userId is stored in the first item of cartItems
+      "cartItems.0.userId": id, 
     });
 
     if (!orders) {
