@@ -2,7 +2,7 @@ import React from 'react';
 
 const Pagination = ({ totalPages, currentPage, onPageChange }) => {
   const handlePageClick = (page) => {
-    if (page < 1 || page > totalPages) return; // Prevent invalid page numbers
+    if (page < 1 || page > totalPages) return; 
     onPageChange(page);
   };
 
