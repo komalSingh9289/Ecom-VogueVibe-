@@ -12,7 +12,7 @@ export const getproducts = async (req, res) => {
     }
     res.status(200).json({ success: true, data: products });
   } catch (error) {
-    console.error(error); // Better practice for logging errors
+    console.error(error); 
     return res
       .status(500)
       .json({ success: false, message: "Failed to retrieve products" });
@@ -40,7 +40,7 @@ export const createProduct = async (req, res) => {
     await newProduct.save();
     return res.status(201).json({ success: true, data: newProduct });
   } catch (error) {
-    console.error(error); // Better practice for logging errors
+    console.error(error); 
     return res
       .status(500)
       .json({ success: false, message: "Failed to create product" });
@@ -52,12 +52,12 @@ export const updateProduct = async (req, res) => {
     const { id } = req.params;
     const updateData = req.body;
 
-    // Validate ObjectId
+    
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ success: false, message: "Invalid Id" });
     }
 
-    // Update product
+    
     const updatedProduct = await Product.findByIdAndUpdate(id, updateData, {
       new: true,
     });
@@ -74,7 +74,7 @@ export const updateProduct = async (req, res) => {
       data: updatedProduct,
     });
   } catch (error) {
-    console.error(error); // Better practice for logging errors
+    //console.log(error);
     return res
       .status(500)
       .json({ success: false, message: "Failed to update product" });
@@ -95,7 +95,7 @@ export const deleteProduct = async (req, res) => {
 
     res.status(200).json({ success: true, message: "Product deleted" });
   } catch (error) {
-    console.error(error); // Better practice for logging errors
+    console.error(error); 
     return res
       .status(500)
       .json({ success: false, message: "Failed to delete product" });
