@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -67,7 +67,7 @@ const Signup = () => {
         toast.success("Registration successful.");
 
         navigate("/login");
-      }else{
+      } else {
         toast.warning("Please Provide valid data!");
       }
       console.log(response);
@@ -100,9 +100,9 @@ const Signup = () => {
                     id="username"
                     name="name"
                     type="text"
-                    data-testid="username"
                     required
-                    className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-300 dark:focus:border-indigo-400 dark:focus:ring-indigo-400 sm:text-sm"
+                    className="block w-full appearance-none 
+                    rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-300 dark:focus:border-indigo-400 dark:focus:ring-indigo-400 sm:text-sm"
                     value={user.name}
                     onChange={handleInput}
                   />
@@ -119,8 +119,7 @@ const Signup = () => {
                   <input
                     id="email"
                     name="email"
-                    type="text"
-                    data-testid="username"
+                    type="email"
                     required
                     className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-300 dark:focus:border-indigo-400 dark:focus:ring-indigo-400 sm:text-sm"
                     value={user.email}
@@ -130,7 +129,8 @@ const Signup = () => {
               </div>
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700 dark:text-white"
+                className="block text-sm 
+                font-medium text-gray-700 dark:text-white"
               >
                 Password
               </label>
@@ -139,7 +139,6 @@ const Signup = () => {
                   id="password"
                   name="password"
                   type="password"
-                  data-testid="password"
                   autoComplete="current-password"
                   required
                   className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-300 dark:focus:border-indigo-400 dark:focus:ring-indigo-400 sm:text-sm"
@@ -159,7 +158,6 @@ const Signup = () => {
                     id="phoneNo"
                     name="phone"
                     type="tel"
-                    data-testid="username"
                     required
                     className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-300 dark:focus:border-indigo-400 dark:focus:ring-indigo-400 sm:text-sm"
                     value={user.phone}
@@ -220,7 +218,6 @@ const Signup = () => {
                     id="city"
                     name="city"
                     type="text"
-                    data-testid="username"
                     required
                     value={user.city}
                     onChange={handleInput}
@@ -240,7 +237,6 @@ const Signup = () => {
                     id="pincode"
                     name="pincode"
                     type="number"
-                    data-testid="username"
                     required
                     value={user.pincode}
                     onChange={handleInput}
@@ -261,7 +257,6 @@ const Signup = () => {
                     id="street"
                     name="street"
                     type="text"
-                    data-testid="username"
                     required
                     value={user.street}
                     onChange={handleInput}
