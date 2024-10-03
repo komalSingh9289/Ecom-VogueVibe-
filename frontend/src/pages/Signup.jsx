@@ -67,6 +67,8 @@ const Signup = () => {
         toast.success("Registration successful.");
 
         navigate("/login");
+      }else{
+        toast.warning("Please Provide valid data!");
       }
       console.log(response);
     } catch (error) {
@@ -139,7 +141,7 @@ const Signup = () => {
                   type="password"
                   data-testid="password"
                   autoComplete="current-password"
-                  required=""
+                  required
                   className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-300 dark:focus:border-indigo-400 dark:focus:ring-indigo-400 sm:text-sm"
                   value={user.password}
                   onChange={handleInput}
@@ -158,7 +160,7 @@ const Signup = () => {
                     name="phone"
                     type="tel"
                     data-testid="username"
-                    required=""
+                    required
                     className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-300 dark:focus:border-indigo-400 dark:focus:ring-indigo-400 sm:text-sm"
                     value={user.phone}
                     onChange={handleInput}
